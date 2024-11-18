@@ -13,11 +13,11 @@ All Web Apps consist of three different layers:
 > This layer is browser/app based and helps end users interact.
 - **Backend**: Data logic resides here.
 > This layer is called 'Brain' of the system.
-All complex computations occur here. Different languages are used.
-Examples:
-1. Java/Spring
-2. Python/Django
-3. JavaScript/Node.js, Express
+> All complex computations occur here. Different languages are used.
+> Examples:
+> 1. Java/Spring
+> 2. Python/Django
+> 3. JavaScript/Node.js, Express.js
 - **Database**: Stores data
 
 ### 3 Different Layers of Backend
@@ -30,7 +30,7 @@ Order of building layers: Model --> Controller --> Route
 ### Node.js
 - Any programming language needs an environment to execute.
 - Node.js is a run-time environment for JavaScript.
-- It is built on V8 engine.
+- It is built on top of V8 engine.
 
 ### JavaScript
 - JavaScript is a programming language used to build websites and web apps.
@@ -60,7 +60,7 @@ It is a single-threaded programming language.
 
 Types of Variables:
 1. Primitive: Simple and immutable
-> There are 8 types of primitive data type like: number, strings, etc.
+> There are 8 types of primitive data types like: number, strings, etc.
 2. Non-primitive: Complex and mutable
 > There are many non-primitive data types like: object, array, etc.
 
@@ -158,4 +158,33 @@ They can be re-used and called from anywhere.
 > While destructuring an object, variable name should match with the name of the key of the object.
 
 13. Higher Order Functions in JavaScript
-- First Order Function
+- **First Order/Normal Function** is a kind of function where primitive/objects are passed in the parameters and it returns primitive/object.
+
+- **Higher Order Function** is a type of function where a parameter has function passed in it or it returns a function.
+
+14. Some Higher Order Array Functions
+- forEach method: helps to process each item of the array.
+- map method: helps in the creation of new transformed array
+- filter method: helps to filter out items of the array.
+- reduce method: helps to accummalate the result by returning a single value
+
+15. JavaScript supports both Synchronous/Blocking and Non-synchronous processing.
+> **Callback Function**: Function passes as argument to some higher order function is called as callback function. (Used in the Asynchronous context)
+
+- **Event loop** keeps an eye on the callback function registered to the Web API and the timer.
+- **Closure** is a type of function that can provide access to a local variable even outside its scope.
+
+> Closures are used for encapsulation.
+
+- Callback Hell/Pyramid of Doom: Callbacks inside callbacks lead to lots of confusion.
+To avoid callback hell, promises and async/await are used.
+
+16. Promises in JavaScript represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+- Outcomes of Promises:
+(1) Positive Outcome: Resolve
+(2) Negative Outcome: Reject
+- After resolution or rejection of promises, they go to settled/completed state.
+- States of Promise Object:
+Pending --> Resolve or Reject --> Settled
+- To achieve the completion of all promises, we use ```all``` function of promise.
+

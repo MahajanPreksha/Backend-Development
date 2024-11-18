@@ -3,52 +3,55 @@ function helloStudents(){
     console.log("Hello Students!");
 }
 helloStudents(); //Arguments, if any are passed inside brackets.
+//Hello Students!
 
 //Function: Sum of two numbers
 function sum(a, b=7){ //a and b are parameters --> dummy values used for definition; b has a default value of 7
     return a + b;
 }
-console.log(sum(1, 2));
+console.log(sum(1, 2)); //3
 
-console.log(sum(5)) //Since b is undefined, NaN will be the output.
+console.log(sum(5)) //If b is undefined, NaN will be the output, otherwise 12.
 
 //Forcing arguments
 function f(){
     console.log(arguments); //global object for function
 }
-f(1, 2, 3, 4, 5, 6, 7);
+f(1, 2, 3, 4, 5, 6, 7); //[Arguments] {'0': 1, '1': 2, '2': 3, '3': 4, '4': 5, '5': 6, '6': 7}
 
 //Arrow Funtions: Write less, get more
 var hello = () => console.log("Hello"); //Function with no argument and no return statement
-hello();
+hello(); //Hello
 
 var sum_arrow = (a, b) => a + b; //Function with parameters and return
-console.log(sum_arrow(5, 7));
+console.log(sum_arrow(5, 7)); //12
 
 var process = (a, b) => {
     console.log("Need to process");
     return a*b;
 }
 console.log(process(1, 2));
+/* Need to process
+2 */
 
 //IIFE
 (function(){ //Function with no name --> Anonymous Function
     console.log("Hello Students");
-})()
+})() //Hello Students
 
 //Global Scope
 var name = "Preksha";
 function func1(){
     console.log(name);
 }
-func1();
+func1(); //Preksha
 
 //Local/Function Scope
 function func2(){
     var num = 55;
     console.log(num);
 }
-func2();
+func2(); //55
 // console.log(num); //Reference Error
 
 //Block Scope
@@ -56,9 +59,9 @@ func2();
     //This is called a block of code.
     var x = 20;
     let y = 21;
-    console.log(x);
+    console.log(x); //20
 }
-console.log(x);
+console.log(x); //20
 // console.log(y); //Error
 
 //var vs let vs const
@@ -68,13 +71,13 @@ function f1(){
     var i = 5;
     console.log(i);
 }
-f1();
+f1(); //5
 // console.log(i); //Error due to function scope
 
 {
     var j = 5;
 }
-console.log(j); //No block scope
+console.log(j); //No block scope --> 5
 
 //Hoisting in var
 console.log(z);
