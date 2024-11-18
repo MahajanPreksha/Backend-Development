@@ -137,13 +137,14 @@ console.log(full_name.indexOf('z')); //-1 because index is not present
 
 //trim
 let word = " HELLO ";
-console.log(word);
-console.log(word.trim());
+console.log(word); // HELLO 
+console.log(word.trim()); //HELLO
 
 //Spliting a string
 full_name = "Preksha Mahajan";
 console.log(full_name.split(" ")); //['Preksha', 'Mahajan'] (returns array of strings)
 console.log(first_name.split("")); //Returns array of characters
+// ['p', 'r', 'e', 'k', 's', 'h', 'a']
 
 //Arrays
 arr = [1, 2, 3, 4, 9, 8, 7, 19, 20, 21, 29];

@@ -52,11 +52,11 @@ It is a single-threaded programming language.
 1. Variables are containers that store data.
 
 > Rules to name a variable:
-- a-z/A-Z/0-9/_/$ are used.
-- Keywords (if, else, for, ...) can't be used.
-- No space between words of the variable are allowed.
-- Give meaningful names.
-- It is case-sensitive.
+> - a-z/A-Z/0-9/_/$ are used.
+> - Keywords (if, else, for, ...) can't be used.
+> - No space between words of the variable are allowed.
+> - Give meaningful names.
+> - It is case-sensitive.
 
 Types of Variables:
 1. Primitive: Simple and immutable
@@ -70,6 +70,7 @@ Null = Purposefully don't want any value to be assigned to a variable.
 2. Operators are used to perform operations on operands.
 
 3. Conditionals are used to check conditions.
+
 Ways to define conditionals include:
 - If-else if-else
 - Nested if-else
@@ -83,7 +84,7 @@ Ways to define conditionals include:
 
 - While loop begins with *while* keyword and contains boolean condition next to it.
 
-For Loop is used when you know the number of times the loop has to run and While Loop is used when execution is based on condition.
+> For Loop is used when you know the number of times the loop has to run and While Loop is used when execution is based on condition.
 
 5. continue and break statements
 - *continue* is used to skip iteration.
@@ -100,7 +101,7 @@ They can be re-used and called from anywhere.
 
 - To avoid NaN, we can use default values in parameters.
 - Another way to write functions is by using arrow functions.
-- Disadvantage of arrow functions: you can't get arguments.
+> Disadvantage of arrow functions: you can't get arguments.
 
 - Sometimes, you define a function and want it to get executed immediately. This situation is called IIFE (Immediately Invoke Function Expression).
 
@@ -168,8 +169,8 @@ They can be re-used and called from anywhere.
 - filter method: helps to filter out items of the array.
 - reduce method: helps to accummalate the result by returning a single value
 
-15. JavaScript supports both Synchronous/Blocking and Non-synchronous processing.
-> **Callback Function**: Function passes as argument to some higher order function is called as callback function. (Used in the Asynchronous context)
+15. JavaScript supports both Synchronous/Blocking and Non-Blocking/Asynchronous processing.
+> **Callback Function**: Function passing as argument to some higher order function is called as callback function. (Used in the Asynchronous context)
 
 - **Event loop** keeps an eye on the callback function registered to the Web API and the timer.
 - **Closure** is a type of function that can provide access to a local variable even outside its scope.
