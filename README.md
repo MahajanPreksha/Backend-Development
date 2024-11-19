@@ -188,4 +188,24 @@ To avoid callback hell, promises and async/await are used.
 - States of Promise Object:
 Pending --> Resolve or Reject --> Settled
 - To achieve the completion of all promises, we use ```all``` function of promise.
+- To achieve the completion of any one promise, we use ```any``` function of promise.
+> For Promise.all([P1, P2, P3]) --> If any one rejects --> catch and if all selects --> then
+> For Promise.any([P1, P2, P3]) --> If any one selects --> then and if all rejects --> catch
 
+- The concept of Promises is quite complicated due to so many callbacks/chaining. To make it synctactically easier, we use Async/Await.
+- As soon as the function is prefixed with the keyword ```async```, it starts returning Promise object.
+- ```await``` keyword helps to wait for the promise to complete. Once it gets completed, it moves onto the enxt step.
+
+17. Error Handling helps to handle failures gracfully.
+- **Error**: It occurs when you can't recover. They can't be controlled/handled.
+- **Exception**: It is something that occurs but can be handled.
+
+> As a Programmer, we handle exceptions (not errors).
+
+- try: check if there is any issue
+- catch: handle the issue at runtime
+
+> Difference between Compile-time and Run-time Errors:
+| Compile-time Error | Run-time Error |
+| ------ | ------ |
+| Compile-time errors occur when a program's code violates the rules of a programming language's syntax and fails to compile. These errors are detected by the compiler and must be fixed before the code can be compiled. | A run-time error is a problem that occurs when a program is executing, causing it to malfunction. |
