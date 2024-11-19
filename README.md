@@ -223,12 +223,17 @@ we use NPM.
 - Check version of NPM: ```npm -v```
 
 - Use Cases of NPM:
+
 (1) Create a Node.js project.
+
 ---> Use npm init and fill details.
+
 ---> package.json file contains all the information about the project.
 
 (2) Get the dependencies/external modules
+
 ---> ```npm install module_name ``` --> Need active internet connectivity
+
 ---> package-lock.json file contains all the cyclic dependencies.
 
 > **Module**: It is a single or multiple JavaScript file(s) which contains the logic to solve any problem, provided that it is being reused anywhere in the program.
