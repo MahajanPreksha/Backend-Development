@@ -206,6 +206,7 @@ Pending --> Resolve or Reject --> Settled
 - catch: handle the issue at runtime
 
 > Difference between Compile-time and Run-time Errors:
+
 | Compile-time Error | Run-time Error |
 | ------ | ------ |
 | Compile-time errors occur when a program's code violates the rules of a programming language's syntax and fails to compile. These errors are detected by the compiler and must be fixed before the code can be compiled. | A run-time error is a problem that occurs when a program is executing, causing it to malfunction. |
