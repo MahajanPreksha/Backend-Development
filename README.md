@@ -48,7 +48,7 @@ It is a single-threaded programming language.
 6. Frontend
 7. Desktop App Development
 
-### Learn JavaScript
+## Learn JavaScript
 1. Variables are containers that store data.
 
 > Rules to name a variable:
@@ -210,3 +210,43 @@ Pending --> Resolve or Reject --> Settled
 | Compile-time Error | Run-time Error |
 | ------ | ------ |
 | Compile-time errors occur when a program's code violates the rules of a programming language's syntax and fails to compile. These errors are detected by the compiler and must be fixed before the code can be compiled. | A run-time error is a problem that occurs when a program is executing, causing it to malfunction. |
+
+## Learn Node.js
+- NPM: Node Package Manager
+- To install all the:
+(1) Dependencies
+(2) Project structure
+(3) Metadata
+we use NPM.
+- NPM is available by default is Node.js is already installed.
+- Check version of Node.js: ```node -v```
+- Check version of NPM: ```npm -v```
+
+- Use Cases of NPM:
+(1) Create a Node.js project.
+---> Use npm init and fill details.
+---> package.json file contains all the information about the project.
+
+(2) Get the dependencies/external modules
+---> ```npm install module_name ``` --> Need active internet connectivity
+---> package-lock.json file contains all the cyclic dependencies.
+
+> **Module**: It is a single or multiple JavaScript file(s) which contains the logic to solve any problem, provided that it is being reused anywhere in the program.
+> Three Types of Modules:
+
+> 1. Custom Modules
+> 2. In-built Modules like: fs, os, http
+> 3. External Modules like: express
+
+- Executing ```node index.js``` manually is tiresome and not feasible.
+- Server: (Never stopping process) It allows applications to be live all the time.
+> Every process is tied to a port number. Since server is also a process, it also has a unique port number, example: 8080.
+- Client should know about:
+(1) IP Address: Address of Machine
+(2) Port Number of server
+which ultimately becomes the URL.
+
+- Client-Server Model or Request-Response Cycle
+--> Client --(request)--> Server --(response)--> Client
+
+- To create servers in node.js, 'http' module is present.

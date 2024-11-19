@@ -1,0 +1,3 @@
+Hello Students!
+How are You?
+I am reading from input file and greeting you guys!
