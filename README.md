@@ -255,3 +255,90 @@ which ultimately becomes the URL.
 --> Client --(request)--> Server --(response)--> Client
 
 - To create servers in node.js, 'http' module is present.
+
+## Learn MongoDB
+- It is a Database Management System that is document-oriented and stores data in the form of collections and documents.
+- It gained popularity in mid 2000s.
+- 'Mongo' stands for huge/humoungous.
+> Limitations of RDBMS like: MySQL, Oracle include: storing data in the form of tables i.e. it has fixed schema and performance issues occur due to huge amount of data.
+- In modern world, data can't be stored in a tabular format or with a fixed schema. We need **flexible** schema.
+- Also, MongoDB is very efficient in storing huge amount of data. So, it is **natively scalable**.
+- It is a NoSQL Database.
+
+> In MySQL/Oracle/RDBMS, Database comprises of Tables which are further made up of Rows and Columns.
+> Data is stored in the form of rows. A complete row represents data/entity.
+
+- In MongoDB, Database comprises of collections which are further made up of Documents where data is stored. Instead of columns, we have fields.
+- Document in MongoDB is similar to JSON type structure called as BSON (Binary Javascript Object Notation).
+- Collection in MongoDB is similar to tables in MySQL. It stores various documents.
+
+- One server of MongoDB can contain many databases. One database can contain multiple collections. One collection can have multiple documents.
+
+- Advantages of MongoDB:
+1. It gives you the best of SQL and NoSQL.
+2. It is free and open source.
+3. It allows flexible schema.
+4. It is reliable.
+5. It allows data replication.
+6. It is horizontally scalable.
+
+> By default, MongoDB creates a unique index on the _id field during the creation of a collection.
+
+- Use cases of MongoDB:
+1. Product Data Management
+2. CMS
+3. Operational Intelligence
+4. Online Applications
+
+- Sharding in MongoDB: Horizontally scaling up the database is called Sharding.
+In other words, it is distributing data on multiple machines.
+
+- Replica Sets in MongoDB: Storing data in more than one machine is called as Replica Set.
+This pattern is called Replication.
+
+> MongoDB is highly scalable because: (a) Sharding (b) Creation of Replica Sets.
+
+- Storing of Data in MongoDB: in BSON i.e. Binary JSON.
+
+---> It takes less space.
+
+---> It leads to faster traversal (improved query speed).
+
+---> It supports large number of datatypes.
+
+> Data Types in MongoDB:
+> **Text**: String
+> **Numeric**: 32-bit integer, 64-bit integer, Double, Decimal128
+> **Date/Time**: Date, Timestamp
+> **Other**: Object, Array, Binary Data, ObjectID, Boolean, Null, Regular expression, JavaScript, Min key, Max key
+
+- Data Modelling in MongoDB: It is used to represent entities and relationships between entities.
+
+> Relationship Types:
+> 1. One to One
+> 2. One to Many
+> 3. Many to One
+> 4. Many to Many
+
+To represent the relationships, there are two types:
+1. Embedded Document/Data: Document nested inside another document --> Denormalised form of data
+2. References --> Normalised form of data
+
+- Advantages of Embedded Data:
+1. **Fast Query** --> Single query can fetch all the data. --> All data is stored as one document.
+2. **Easy to Create**
+3. **Easy to maintain transactions** --> Single document makes it transactional.
+
+> Max. size of one document is just 16 MB.
+
+- Disadvantages of Embedded Data:
+1. Too much embedding can exceed 16 MB limit.
+2. Excess of data gets loaded each time i.e. Eager Loading can occur. This can lead to network or storage overhead.
+
+- Advantages of Reference:
+1. Documents are smaller.
+2. Lazy Loading occurs i.e. it loads only that much data which is needed.
+
+- Disadvantages of Reference:
+1. Query is slower due to the need of multiple queries.
+2. Transaction becomes complicated.
