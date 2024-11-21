@@ -342,3 +342,90 @@ To represent the relationships, there are two types:
 - Disadvantages of Reference:
 1. Query is slower due to the need of multiple queries.
 2. Transaction becomes complicated.
+
+> Inside a MongoDB server, we can build multiple databases.
+> Example: test database can have multiple collections (c1, c2, c3).
+> Each collection can have multiple documents.
+
+- ```mongosh```: open terminal. By default, we get *test* database.
+- ```cls``: To clear the terminal screen
+
+#### Commands for Database
+- ```show databases```: To see/list already created databases (only those which contain data) in the MongoDB server
+> Shortcut: ```show dbs``
+- ```use db_name```: Use an existing database
+- ```use new_db_name```: Create a new database
+
+#### Commands for Collection
+- ```show collections```: List all collections
+- ```db.createCollection("collection_name")```: Create a new collection
+> Confirmation: {ok: 1} ---> Command has successfully been executed.
+- ```db.collection_name.renameCollection("collection_new_name")```: Update the name of a collection
+- ```db.collection_name.remove({})```: Delete one or more documents from the collection ---> Old Command
+- ```db.collection_name.drop()```: Delete the entire collection
+> Confirmation: true
+
+- **CRUD**: Create, Read, Update, Delete
+
+#### Commands for Document
+- Create: Insert Queries ---> Insert Documents in the form of BSON
+
+```db.collection_name.insertOne(document_name)```: Insert one document
+
+```db.collection_name.insertMany([document1_name, document2_name])```: Insert more than one documents
+
+```db.collection_name.find()```: Find all documents
+
+```db.collection_name.find({field:value})```: Search out the document based upon field-value pair
+
+```db.collection_name.find({'field.second_field' : 'value'})```: Search out the nested document based upon key-value pair
+
+```db.students.find({name: {$regex:/^P/}})```: Using Regex to search for results
+
+```db.collection_name.find().limit(n)```: Search for 'n' number of documents
+
+```db.collection_name.find().pretty()```: Format the output
+
+```db.collection_name.find().skip(n)```: Skips first 'n' number of documents
+
+```db.collection_name.find().sort({field:'value'})```: Search for documents based upon sorting criteria
+> value as 1 --> Ascending order and value as -1 --> Descending order
+
+```db.collection_name.find().count()```: Count number of documents
+
+```db.collection_name.distinct('field')```: Retrieve distinct value
+
+```db.collection_name.distinct('field.second_field')```: Retrieve distinct value for nested field
+
+```db.collection_name.find({field: {$lt: n}})```: Retrieve data less than n
+
+```db.collection_name.find({field: {$lte: n}})```: Retrieve data less than or equal to n
+
+```db.collection_name.find({field: {$gt: n}})```: Retrieve data greater than n
+
+```db.collection_name.find({field: {$gte: n}})```: Retrieve data greater than or equal to n
+
+```db.collection_name.find({field: {$ne: 'string is also accepted in some operators'}})```: Retrieve data not equal to n
+
+```db.collection_name.find({field: {$in: [n1, n2, n3, ...]}})```: Retrieve data that comes in the list (Works like OR)
+
+```db.collection_name.find({field: {$all: [n1, n2, n3, ...]}})```: Retrieve data that comes in the list (Works like AND)
+
+- Update: Updation of documents
+```db.collection_name.update({field:'value'}, {$set: {otherField: 'new value'}}, {upsert: true})```: Update document --> Multiple documents can also be updated
+
+```db.collection_name.updateOne({field:'value'}, {$inc: {number: num}})```: Increment the value num
+
+```db.collection_name.updateOne({_id:'value'}, {$inc: {numbers: num}})```: Push the value num to the numbers array where id is value
+
+- Delete: Deletion of documents
+```db.collection_name.deleteOne({field:'value'})```: Deletes one document based upon filter or search criterion
+
+```db.collection_name.deleteMany({field:{$in: [value1, value2]}})```: Deletes more than one documents based upon filter or search criterion
+
+- ODM: Object Data Model ---> Mongoose
+
+> Application (JavaScript) ---> ODM (Translator) ---> Database (Mongo Query)
+> Note: In case of RDBMS like: MySQL or Oracle, we use ORM (Object Relational Model).
+
+**Mongoose** can help you do CRUD operations using JavaScript without Mongo Queries.
