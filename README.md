@@ -500,3 +500,34 @@ To represent the relationships, there are two types:
 4. 401: Unauthorised
 5. 404: Resource not found
 6. 500: Server error
+
+## Learn Express.js
+
+- Express.js is a framework of Node.js that can improve the experience of creating any web application/Restful APIs.
+
+> To avoid writing the boiler plate code and easily collaborate with others, we use frameworks.
+
+- Request-Response Cycle in detail:
+1. User enters a URL in their browser.
+2. An HTTP request is submitted to the URL's corresponding server.
+3. The server hosting the requested URL processes the HTTP request and determines the appropriate response to send back to the user.
+4. An HTTP response is sent to the user (client) in the form of HTML, JSON, plain text or other formats.
+5. User recevies a response, usually in the form of an HTML page, which renders on their browser window.
+
+- Request-Response Cycle in Node.js application:
+1. Client requests something to Node's HTTP server.
+2. HTTP server hands request to your function.
+3. Your function hands response to HTTP server.
+4. HTTP server sends response to Client browser, mobile app, etc.
+
+- Challenges in using only Node.js:
+1. As the number of types of client requests increases, handling those gets complex.
+2. Many of the commonly used features such as reusable HTML require a lot of code manipulations.
+3. There is lots of boilerplate code. ---> BIGGEST CHALLENGE!!
+
+- Advantages of using Express in your application:
+1. Faster server-side development
+2. Pluggable middlewares
+3. Support for templating engines
+4. Clean routing supports
+5. Debugging support
