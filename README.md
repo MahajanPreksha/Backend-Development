@@ -429,3 +429,74 @@ To represent the relationships, there are two types:
 > Note: In case of RDBMS like: MySQL or Oracle, we use ORM (Object Relational Model).
 
 **Mongoose** can help you do CRUD operations using JavaScript without Mongo Queries.
+
+## Learn REST APIs
+
+- **API**: Application Programming Interface
+- The communication between the server-side and the client-side UI happens with the help of an interface called API. (Request Response Cycle)
+- API specifies the request that can be made and how to make them, including the data format and other conventions.
+- A web API is an application programming interface for a web server.
+- In simple terms, APIs allow two applications to communicate (sharing data) with each other.
+
+> SOAP: Simple Object Access Protocol ---> Old technique
+
+> SOAP was allowed to make the communication with the help of XML file format. 
+
+> XML is language agnostic as it performs serialisation and deserialisation.
+
+> But XML is a slow and heavy language [10% - actual data and 90% - metadata], leading to slow network transfer. So, SOAP is not flexible.
+
+- REST APIs provide flexibility in case of file formats. By default, JSON is used which is light-weight and fast.
+- JSON: JavaScript Object Notation
+- It is a file format which is language agnostic.
+- It stores data in the form of key-value pairs.
+- **REST**: Representational State Transfer
+- At the core of REST, there is data. Representation of the state of data gets transferred layer-by-layer.
+- REST endpoint: It refers to a specific URL(Unique Resource Locator) or URI (Unique Resource Identifier) in a RESTful API that a client can interact with to perform certain operations, like retrieving or modifying data.
+- On the basis of REST endpoints, CRUD applications can take place on the resources.
+- URI: ip_address:port_number/application_name/version_number/resource_name (**plural noun**)/resource --> Absolute Path of Resource
+> Example - Vehicle Management System
+
+> URI: 111.21.31.42:8181/VMS/v1/vehicles/4351
+
+- REST APIs are built on top of **HTTP**.
+- HTTP Verbs denotes the type of action to be taken.
+1. Create --> POST
+2. Read --> GET
+3. Update --> PUT
+4. DELETE --> DELETE
+
+- HTTP Verb (Action) + URI (Resource) = Restful URIs
+> Example of Restful URI for creating movies in a Movie Booking Application: POST 127.0.0.1:8080/mba/v1/movies (movie body needs to be given along)
+
+> Example of searching/fetching all the movies: GET 127.0.0.1:8080/mba/v1/movies
+
+> Example of updating a movie with id=12345: PUT 127.0.0.1:8080/mba/v1/movies/12345 (request body needs to be given along)
+
+- **Path params** in Restful URIs: Request/Path Parameters dynamic segments of a URI used in RESTful APIs to identify specific resources. They are typically part of the endpoint's path and are used to pass information to the server.
+> Example: PUT 127.0.0.1:8080/mba/v1/movies/12345; Here 12345 is the path param.
+
+- **Query params** in Restful URIs: It is used mostly for filtering.
+> Example: GET 127.0.0.1:8080/mba/v1/movies?language="Hindi"&actor="SRK"; Anything after '?' is the query param.
+
+> Idempotent: If the result of the restful URI/endpoint has same effect even after calling it many times, it is idempotent.
+> Otherwise, it is non-idempotent.
+
+- GET: Idempotent --> SAFE
+- PUT: Idempotent --> SAFE
+- DELETE: Idempotent --> SAFE
+- POST: Non-Idempotent (It will always create a new resource) --> NOT SAFE
+
+- Components of a REST Message:
+1. HTTP Method: Helps in defining the action to be taken on the resource (CRUD operations).
+2. Resource Path/URI: Specifies the path of the resource and consists of path and query string parameters.
+3. Header: Contains information about the message-information related to authentication, instructions to process a message, etc.
+4. Body: Specifies the information that is to be acted upon in terms of CRUD Operations.
+
+- Response Codes: HTTP has standard status codes that are returned as part of the HTTP response.
+1. 200: Success
+2. 201: Created
+3. 301: Moved permanently (Redirect status response code)
+4. 401: Unauthorised
+5. 404: Resource not found
+6. 500: Server error
